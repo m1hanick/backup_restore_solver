@@ -18,7 +18,7 @@ def Solver(token: str) -> dict:
     for val in matches: 
         x.append(val[0])
 
-    out_body = {'alive_ssns': list(x)}
+    out_body = {'alive_ssns': x}
 
     answ_url = f"https://hackattic.com/challenges/backup_restore/solve?access_token={token}"
 
@@ -34,7 +34,7 @@ def main():
     args_parser.add_argument("--token", "-t",
                             metavar="token",
                             required=True,
-							help="Enter the auth token")
+			    help="Enter the auth token")
     
     args = args_parser.parse_args()
     
